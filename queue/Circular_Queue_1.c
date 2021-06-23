@@ -21,10 +21,10 @@ main()
 	printf("\n\t\t||      NAMA           |       NIM     ||");
 	printf("\n\t\t||=====================================||");
 	printf("\n\t\t|| Taufiq Alif Rahman  |    312010289  ||");
-	printf("\n\t\t|| Anshar Rahmawan     |    312010308  ||");
+	printf("\n\t\t|| Anshar Rahmawan     |    312010309  ||");
 	printf("\n\t\t|| Febri Aditiya       |    312010212  ||");
 	printf("\n\t\t|| Reka Hani Latifah N |    312010343  ||");
-	printf("\n\t\t|| Wulan Agustin       |    312010217  ||");
+	printf("\n\t\t|| Wulan Agustin       |    312010301  ||");
 	printf("\n\t\t=========== TUGAS KELOMPOK 7 ============");
 	printf("\n\t\t\t     KELAS TI.20.A2");
 	printf("\n\n");
@@ -36,7 +36,7 @@ main()
         printf("\n||3. Cetak              ||");
         printf("\n||4. Keluar             ||");
         printf("\n==========================");
-        printf("\nMasukan Pilihan :");
+        printf("\nMasuan Pilihan :");
         scanf("%d",&w);
 
         switch(w)
@@ -70,7 +70,7 @@ void tambah()
     if(f== -1)
         f++;
     if(r==max-1)
-        r = 0;
+        r=0;
     else r=r+1;
         Q[r]=no;
 }
@@ -84,7 +84,6 @@ int hapus()
         return;
     }
     e=Q[f];
-
     if(f==max-1)
         f=0;
     else if(f==r)
@@ -113,10 +112,16 @@ void cetak()
             printf("\nAntrian > %d nomor ke => %d ",i,Q[i]);
         printf("\n");
         }
-    }else if(i=-1){
+    }
+    else
+    {
         printf("\n\n NO Antrian");
-        while(i<max-1)
-           printf("\nAntrian > %d nomor ke => %d ",i,Q[++i]);
+        while(i<=max-1)
+           printf("\nAntrian > %d nomor ke => %d ",i,Q[i++]) ;
+        i=0;
+
+        while(i<=r)
+            printf("\nAntrian > %d nomor ke => %d ",i,Q[i++]);
         printf("\n");
     }
 }
